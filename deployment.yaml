@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: factorio-server
+  name: factorio-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: factorio-server
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: factorio-server
+    spec:
+      containers:
+      - image: factorio-server:v0.01
+        imagePullPolicy: Always
+        name: factorio-server
+        ports:
+        - containerPort: 34197 
+        stdin: true
+        tty: true
