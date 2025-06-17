@@ -2,7 +2,7 @@
 とりあえず動くとこまで
 
 ```
-kubectl apply -f manifest/
+kubectl apply -f manifests/
 ```
 
 ## TODO
